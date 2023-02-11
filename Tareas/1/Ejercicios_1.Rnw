@@ -39,12 +39,10 @@
 & P(Y=9)=\left(\begin{array}{c} 10 \\ 9 \end{array}\right) \cdot 0,1^9 \cdot(1-0,1)^1= 9 \cdot 10^{-9} \\
 \\
 & 7. \\
- \end{align*}
  \vspace{1cm}
-\begin{center}
-\text{Observadas} \\
+& \text{Observadas} \\
 \vspace{0.5cm}
-\begin{tabular}{ |c|c|c|c| }
+& \begin{tabular}{ |c|c|c|c| }
  \hline
   & E & $\bar{E}$ & Total  \\
  \hline
@@ -55,9 +53,9 @@
 \end{tabular} 
 \\
 \vspace{0.5cm}
-\text{Esperadas} \\
+& \text{Esperadas} \\
 \vspace{0.5cm}
-\begin{tabular}{ |c|c|c|c| }
+& \begin{tabular}{ |c|c|c|c| }
  \hline
   & E & $\bar{E}$ & Total  \\
  \hline
@@ -65,6 +63,19 @@
  N & 4,5  & 95,5 & 100  \\
  Total & 45  & 955 & 1000 \\ 
  \hline
-\end{tabular}
-\end{center}
+\end{tabular} \\
+\\
+& 8. \\
+& H_{0} : \pi_{ij} = \pi_{i+} \pi_{+j} \text { para todo i,j} \\
+& H_{1} : \pi_{ij} \neq \pi_{i+} \pi_{+j} \text { para algún i,j} \\
+\\
+& \chi^2=\sum_{i=1}^n \frac{\left(O_i-E_i\right)^2}{E_i} = \\
+& \frac{(30-40,5)^2}{40,5}+\frac{(870-859,5)^2}{859,5}+ \\
+& \frac{(15-4,5)^2}{4,5}+\frac{(85-95,5)^2}{95,5}= \\
+& 28,5
+\\
+& 9. \\
+
+\end{align*}
+\\
 \end{document}
