@@ -8,6 +8,7 @@
 \usepackage{stmaryrd}
 \allowdisplaybreaks
 
+
 \begin{document}
 
 
@@ -72,10 +73,17 @@
 & \chi^2=\sum_{i=1}^n \frac{\left(O_i-E_i\right)^2}{E_i} = \\
 & \frac{(30-40,5)^2}{40,5}+\frac{(870-859,5)^2}{859,5}+ \\
 & \frac{(15-4,5)^2}{4,5}+\frac{(85-95,5)^2}{95,5}= \\
-& 28,5
+& 28,5 \\
 \\
 & 9. \\
-
+& \text{Distribución muestral del estadístico $\chi^2$ con 4 grados de libertad}
 \end{align*}
+<<echo= T, fig=T>>=
+x <- rchisq(1000,4)
+curve(dchisq(x,4),0,40, ylab="Densidad")
+@
 \\
+\begin{align*}
+& 10. \\
+\end{align*}
 \end{document}
