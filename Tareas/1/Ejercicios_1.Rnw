@@ -100,4 +100,5 @@ curve(dchisq(x,4),0,40, ylab="Densidad")
 @
 \\
 10. \\
+Con un $\alpha = 0,05$, el punto crítico para la distribución muestral con 4 grados de libertad es $9,49$. El valor del estadístico obtenido en nuestra muestra es de $28,5$, por lo que se encuentra en la región de rechazo de la hipótesis nula. Concluimos que los resultados no son independientes del estado de salud de la persona. \\ 
 \end{document}
