@@ -37,7 +37,34 @@
 & 6. \\
 & n=10 \quad \pi= P(P \mid \bar{E}) = 1-P(N \mid \bar{E})=1-0,9=0,1 \\
 & P(Y=9)=\left(\begin{array}{c} 10 \\ 9 \end{array}\right) \cdot 0,1^9 \cdot(1-0,1)^1= 9 \cdot 10^{-9} \\
-\end{align*}
-
-
+\\
+& 7. \\
+ \end{align*}
+ \vspace{1cm}
+\begin{center}
+\text{Observadas} \\
+\vspace{0.5cm}
+\begin{tabular}{ |c|c|c|c| }
+ \hline
+  & E & $\bar{E}$ & Total  \\
+ \hline
+ P & 30 & 870 & 900  \\ 
+ N & 15  & 85 & 100  \\
+ Total & 45  & 955 & 1000 \\ 
+ \hline
+\end{tabular} 
+\\
+\vspace{0.5cm}
+\text{Esperadas} \\
+\vspace{0.5cm}
+\begin{tabular}{ |c|c|c|c| }
+ \hline
+  & E & $\bar{E}$ & Total  \\
+ \hline
+ P & 40,5 & 859,5 & 900  \\ 
+ N & 4,5  & 95,5 & 100  \\
+ Total & 45  & 955 & 1000 \\ 
+ \hline
+\end{tabular}
+\end{center}
 \end{document}
