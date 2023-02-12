@@ -46,8 +46,8 @@ Resolución \\
 \\
 6. \\
 \begin{align*}
-& n=10 \quad \pi= P(P \mid \bar{E}) = 1-P(N \mid \bar{E})=1-0,9=0,1 \\
-& P(Y=9)=\left(\begin{array}{c} 10 \\ 9 \end{array}\right) \cdot 0,1^9 \cdot(1-0,1)^1= 9 \cdot 10^{-9} \\
+& n=10 \quad \pi= P(P \mid \bar{E}) = 1-P(N \mid \bar{E})=1-0,1=0,9 \\
+& P(Y=9)=\left(\begin{array}{c} 10 \\ 9 \end{array}\right) \cdot 0,9^9 \cdot(1-0,9)^1= 0,3874  \\
 \end{align*}
 \\
 7. \\
