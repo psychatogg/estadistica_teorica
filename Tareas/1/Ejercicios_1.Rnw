@@ -53,16 +53,16 @@ Resolución \\
 7. \\
 \begin{align*}
  \vspace{1cm}
-& \text{Frecuencias bservadas y esperadas. Para estas últimas, calculamos las intersecciones}\\
-& \text{por medio de las marginales y condicionadas} \\
+& \text{Frecuencias observadas y esperadas. Para calcular estas últimas, aplicamos las intersecciones}\\
+& \text{al total de la muestra} \\
 \vspace{0.5cm}
 & \begin{tabular}{ |c|c|c|c| }
  \hline
   & E & $\bar{E}$ & Total  \\
  \hline
- P & 30 ($45 \cdot 0,7 = 31,5$) & 870 ($955 \cdot 0,9 = 859,5$) & 900  \\ 
- N & 15 ($45 \cdot 0,3 = 13,5$)  & 85 ($955 \cdot 0,1 = 95,5$) & 100  \\
- Total & 45  & 955 & 1000 \\ 
+ P & 30 ($0,035 \cdot 1000 = 35$) & 870 ($0,855 \cdot 1000 = 855$) & 900 (890)  \\ 
+ N & 15 ($0,015 \cdot 1000 = 15$)  & 85 ($0,095 \cdot 1000 = 95$) & 100 (110)  \\
+ Total & 45 (50)  & 955 (950) & 1000 \\ 
  \hline
 \end{tabular} 
 \end{align*}
@@ -70,25 +70,21 @@ Resolución \\
 8. \\
 \begin{align*}
 & H_{0} : f(n_{i} = M(\pi_{E \cap P} = 0,035; \pi_{E \cap N} = 0,015 ; \pi_{\bar{E} \cap P} = 0,855; \\
-& \pi_{\bar{E} \cap N} = 0,1 \cdot 0,95 = 0,095 \\
+& \pi_{\bar{E} \cap N} = 0,095 \\
 & H_{1} : f(n_{i} \neq M(\pi_{E \cap P} = 0,035; \pi_{E \cap N} = 0,015 ; \pi_{\bar{E} \cap P} = 0,855; \\
-& \pi_{\bar{E} \cap N} = 0,1 \cdot 0,95 = 0,095 \\
+& \pi_{\bar{E} \cap N} = 0,095 \\
 \\
 & \chi^2=\sum_{i=1}^4 \frac{\left(n_i-m_i\right)^2}{m_i} = \\
-& \frac{(30-31,5)^2}{31,5}+\frac{(870-859,5)^2}{859,5}+ \\
-& \frac{(15-13,5)^2}{13,5}+\frac{(85-95,5)^2}{95,5}= \\
-&  1,52\\
+& \frac{(30-35)^2}{35}+\frac{(870-855)^2}{855}+ \\
+& \frac{(15-15)^2}{15}+\frac{(85-95)^2}{95}= \\
+&  2,03\\
 \end{align*}
 \\
 9. \\
 \begin{align*}
-& \text{Distribución muestral del estadístico $\chi^2$ con $I-1 = 3$ grados de libertad}
+& \text{El estadístico sigue una distribución $\chi^2$ con $I-1 = 3$ grados de libertad}
 \end{align*}
-<<echo= T, fig=T>>=
-x <- rchisq(1000,3)
-curve(dchisq(x,3), 0,40, ylab="Densidad")
-@
-\\
+
 10. \\
-Con un $\alpha = 0,05$, el punto crítico para la distribución muestral con 3 grados de libertad es $7,81$. El valor del estadístico obtenido en nuestra muestra es de $1,52$, por lo que se encuentra en la región de aceptación de la hipótesis nula. Concluimos que la muestra selecionada procede de una población en las que se cumplen las proporciones del enunciado. \\ 
+Con un $\alpha = 0,05$, el punto crítico para la distribución muestral con 3 grados de libertad es $7,81$. El valor del estadístico obtenido en nuestra muestra es de $2,03$, por lo que se encuentra en la región de aceptación de la hipótesis nula. Concluimos que la muestra selecionada procede de una población en las que se cumplen las proporciones del enunciado. \\ 
 \end{document}
