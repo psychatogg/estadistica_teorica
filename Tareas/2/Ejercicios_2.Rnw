@@ -1,0 +1,28 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\allowdisplaybreaks
+
+
+\begin{document}
+Resolución \\
+\\
+1. \\
+\begin{align*}
+& E(x) = \int_0^2 \frac{15}{64}\left(4 x^2-x^4\right) = \\
+& u=x \quad d v=\frac{15}{64}\left(4 x^2-x^4\right) \\
+& d u=d x \quad v=\frac{15}{64} \cdot\left(\frac{4 x^3}{3}-\frac{x^5}{5}\right) \\
+\\
+&  = x \cdot \frac{15}{64} \cdot\left(\frac{4 x^3}{3}-\frac{x^5}{5}\right)-\int_0^2 \frac{15}{64} \cdot\frac {4x^3}{3} -\frac{x^5}{5} = \\
+& \frac{15 x}{64} \left(\frac{4 x^3}{3}-\frac{x^5}{5}\right)-\frac{15}{64} \cdot \left( \frac{4}{3} \cdot \frac{x^4}{4}-\frac{1}{5} \frac{x^6}{6}\right)]_0^2
+& \frac{15 \cdot 2}{64}\left(\frac{4 \cdot 8}{3}-\frac{32}{5}\right)-\frac{15}{64} \cdot\left(\frac{4 \cdot 16}{12}-\frac{64}{30}\right) \\
+& \frac{15}{32} \cdot \frac{64}{15}-\frac{15}{64} \cdot\left(\frac{16}{3}-\frac{32}{15}\right)= \\
+& \frac{960}{480}-\frac{15}{64} \cdot \frac{16}{5}= \\
+& 2 - 0,75=1,25
+\end{align*}
+\end{document}
