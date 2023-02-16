@@ -14,15 +14,35 @@ Resolución \\
 \\
 1. \\
 \begin{align*}
+& \text {Obtenemos la suma ponderada de cada valor de x:} \\
 & E(x) = \int_0^2 \frac{15}{64}\left(4 x^2-x^4\right) = \\
 & u=x \quad d v=\frac{15}{64}\left(4 x^2-x^4\right) \\
 & d u=d x \quad v=\frac{15}{64} \cdot\left(\frac{4 x^3}{3}-\frac{x^5}{5}\right) \\
 \\
 &  = x \cdot \frac{15}{64} \cdot\left(\frac{4 x^3}{3}-\frac{x^5}{5}\right)-\int_0^2 \frac{15}{64} \cdot\frac {4x^3}{3} -\frac{x^5}{5} = \\
-& \frac{15 x}{64} \left(\frac{4 x^3}{3}-\frac{x^5}{5}\right)-\frac{15}{64} \cdot \left( \frac{4}{3} \cdot \frac{x^4}{4}-\frac{1}{5} \frac{x^6}{6}\right)]_0^2
-& \frac{15 \cdot 2}{64}\left(\frac{4 \cdot 8}{3}-\frac{32}{5}\right)-\frac{15}{64} \cdot\left(\frac{4 \cdot 16}{12}-\frac{64}{30}\right) \\
+& \frac{15 x}{64} \left(\frac{4 x^3}{3}-\frac{x^5}{5}\right)-\frac{15}{64} \cdot \left( \frac{4}{3} \cdot \frac{x^4}{4}-\frac{1}{5} \frac{x^6}{6}\right)]_0^2 = \\
+& \frac{15 \cdot 2}{64}\left(\frac{4 \cdot 8}{3}-\frac{32}{5}\right)-\frac{15}{64} \cdot\left(\frac{4 \cdot 16}{12}-\frac{64}{30}\right) = \\
 & \frac{15}{32} \cdot \frac{64}{15}-\frac{15}{64} \cdot\left(\frac{16}{3}-\frac{32}{15}\right)= \\
 & \frac{960}{480}-\frac{15}{64} \cdot \frac{16}{5}= \\
 & 2 - 0,75=1,25
 \end{align*}
+\\
+2. \\
+\begin {align*}
+& \text{La moda será el valor máximo absoluto de $f(x)$:} \\
+& f^{\prime}(x) = \frac{15}{64} \cdot\left(8 x-4 x^3\right)=  \\
+& \frac{15 x}{16} \cdot\left(2-x^2\right) \\
+& \frac{15 x}{16}\left(2-x^2\right)=0 \\
+& 15 x\left(2-x^2\right)=0 \\
+& 30 x-15 x^3=0 \\
+\\
+& x_1=0 \\
+& x_2=-\sqrt{2} \\
+& x_3=\sqrt{2} \\
+\\
+& f^{\prime \prime}(x)=30-45 x^2 \\
+& f^{\prime \prime}(\sqrt{2})=-60 \\
+& \text{Teniendo en cuenta el dominio de la función de densidad, localizamos un máximo en}\\
+& \text{$x = \sqrt 2$, que es la moda de la distribución}\\
+\end {align*}
 \end{document}
