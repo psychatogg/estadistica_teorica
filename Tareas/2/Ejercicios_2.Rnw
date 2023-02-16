@@ -35,14 +35,27 @@ Resolución \\
 & \frac{15 x}{16}\left(2-x^2\right)=0 \\
 & 15 x\left(2-x^2\right)=0 \\
 & 30 x-15 x^3=0 \\
-\\
+& \\
 & x_1=0 \\
 & x_2=-\sqrt{2} \\
 & x_3=\sqrt{2} \\
-\\
+& \\
 & f^{\prime \prime}(x)=30-45 x^2 \\
+& f^{\prime \prime}(0)=30 \\
 & f^{\prime \prime}(\sqrt{2})=-60 \\
-& \text{Teniendo en cuenta el dominio de la función de densidad, localizamos un máximo en}\\
-& \text{$x = \sqrt 2$, que es la moda de la distribución}\\
+& \text{Teniendo en cuenta el dominio de la función de densidad, localizamos}\\
+& \text{ un máximo en $x = \sqrt 2$, que es la moda de la distribución.}\\
+\end {align*}
+\\
+3. \\
+\begin{align*}
+& \text {Empleamos la función integral, que toma límite superior variable} \\
+& F(x) = \int_{u=0}^{u=x} \frac{15\left(4 x^2-x^4\right)}{64} d u= \\
+& \left.\frac{15\left(4 x^2-x^4\right)}{64} u\right]_{u=0}^{u=x}= \\
+& \frac{15\left(4 x^2-x^4\right)}{64} \cdot x \\
+\end {align*}
+4. \\
+\begin {align*}
+& P(X \leq 1) = \frac{15\left(4 1^2-1^4\right)}{64} \cdot 1 = 0,7 \\
 \end {align*}
 \end{document}
