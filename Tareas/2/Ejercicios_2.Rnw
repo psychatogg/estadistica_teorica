@@ -15,7 +15,7 @@ Resolución \\
 1. \\
 \begin{align*}
 & \text {Obtenemos la suma ponderada de cada valor de x:} \\
-& E(x) = \int_0^2 \frac{15}{64}\left(4 x^2-x^4\right) = \\
+& E(x) = \int_0^2 x \cdot \frac{15}{64}\left(4 x^2-x^4\right) = \\
 & u=x \quad d v=\frac{15}{64}\left(4 x^2-x^4\right) \\
 & d u=d x \quad v=\frac{15}{64} \cdot\left(\frac{4 x^3}{3}-\frac{x^5}{5}\right) \\
 \\
@@ -56,6 +56,33 @@ Resolución \\
 \end {align*}
 4. \\
 \begin {align*}
-& P(X \leq 1) = \frac{15\left(4 1^2-1^4\right)}{64} \cdot 1 = 0,7 \\
+& P(X \leq 1) = \frac{15\left(4 \cdot 1^2-1^4\right)}{64} \cdot 1 = 0,7 \\
 \end {align*}
+\\
+5. \\
+<<>>=
+x <- seq(0, 2, by=0.001)
+f<- (15/64)*((4*x^2)-x^4)
+plot(x, f, type="l", lwd=1.5, main="Función de densidad", xlab="x", ylab="Densidad")
+@
+
+6. \\
+<<>>=
+xfx <- function(x) {x*(15/64)*((4*x^2)-x^4)}
+Ex <- integrate(xfx, lower = 0, upper = 2)
+print(Ex)
+@
+
+7. \\
+<<>>=
+g <- function(x) (15/64)*((4*x^2)-x^4)  
+fit <- optimize(g, c(0, 2), maximum=TRUE)
+print(fit)
+@
+8. \\
+<<>>=
+fx <- function(x) {(15/64)*((4*x^2)-x^4)}
+P1 <- integrate(fx, lower = 0, upper = 1)
+print(P1)
+@
 \end{document}
