@@ -1,0 +1,30 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\allowdisplaybreaks
+
+
+\begin{document}
+Resolución \\
+\\
+1. \\
+\begin{align*}
+& \text {Obtenemos la suma ponderada de cada valor de x:} \\
+& f(x) = 30x^{4} (1-x) \\
+& E(x) = \int_0^1 x \cdot 30x^{4} (1-x) =\\
+& \int_0^1 x \cdot 30 x^4(1-x) d x= \\
+& \int_0^1\left(30 x^5-30 x^6\right) d x= \\
+& 30 \int_0^1 x^5 d x-30 \int_0^1 x^6 d x= \\
+& \left.30 \frac{x^6}{6}-30 \frac{x^7}{7}\right]_0^1= \\
+& \left.5 x^6-30 \frac{x^7}{7}\right]_0^1= \\
+& \frac{5}{7} \\
+\end{align*}
+\\
+2. \\
+
+\end{document}
