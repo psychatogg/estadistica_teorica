@@ -16,7 +16,7 @@ Resolución \\
 \begin{align*}
 & \text {Obtenemos la suma ponderada de cada valor de x:} \\
 & f(x) = 30x^{4} (1-x) \\
-& E(x) = \int_0^1 x \cdot 30x^{4} (1-x) d x =\\
+& E(X) = \int_0^1 x \cdot 30x^{4} (1-x) d x =\\
 & \int_0^1 x \cdot 30 x^4(1-x) d x= \\
 & \int_0^1\left(30 x^5-30 x^6\right) d x= \\
 & 30 \int_0^1 x^5 d x-30 \int_0^1 x^6 d x= \\
@@ -51,4 +51,15 @@ Resolución \\
 & 6x^{5} - 5x^{6}]_0^x = \\
 & 6x^{5} - 5x^{6} \\
 \end{align*}
+\\
+4. \\
+\begin {align*}
+& \text{Dado que $n = 25$, aplicamos el teorema central del límite:} \\
+& E(X) = E(\bar X) = \frac{5}{7} \\
+\\
+& \text{No podemos determinar el valor de $Var(\bar X)$, ya que solo} \\
+& \text{contamos con una muestra.}
+\end{align*}
+5. \\
+
 \end{document}
