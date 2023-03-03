@@ -61,5 +61,9 @@ Resolución \\
 & \text{contamos con una muestra.}
 \end{align*}
 5. \\
-
+\begin {align*}
+& Z=\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} = \\
+& \frac {0,7-\frac{5}{7}}{\sqrt(\frac{5}{196}) / \sqrt{25}} = \\
+& -0,447 \\
+\end{align*}
 \end{document}
