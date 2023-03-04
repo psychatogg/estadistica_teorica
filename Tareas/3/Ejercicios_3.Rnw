@@ -57,7 +57,7 @@ Resolución \\
 & \text{Dado que $n = 25$, aplicamos el teorema central del límite:} \\
 & E(X) = E(\bar X) = \frac{5}{7} \\
 \\
-& Var(X) = \frac {\sigma^{2}}{n} = \frac {\frac{5}{196}}{25} =  \frac{1}{980} \\
+& Var(\bar X) = \frac {\sigma^{2}}{n} = \frac {\frac{5}{196}}{25} =  \frac{1}{980} \\
 \end{align*}
 5. \\
 \begin {align*}
@@ -65,4 +65,45 @@ Resolución \\
 & \frac {0,7-\frac{5}{7}}{\sqrt(\frac{5}{196}) / \sqrt{25}} = \\
 & -0,447 \\
 \end{align*}
+\\
+6. \\
+<<>>=
+## E(X)
+xfx <- function(x) {x * 30*x^4*(1-x)}
+Ex <- integrate(xfx, lower = 0, upper = 1)
+print(Ex)
+## Momento de orden 2
+x2fx <- function(x) {x^2 * 30*x^4*(1-x)}
+Ex2 <- integrate(x2fx, lower = 0, upper = 1)
+print(Ex2)
+## Var(X)
+Varx <- Ex2$value-Ex$value^2
+print(Varx)
+@
+7. \\
+<<>>=
+fx <- function(x) {30*x^4*(1-x)}
+res <- integrate(fx, lower = 0.2, upper = 0.8)
+print(res)
+@
+8. \\
+<<fig=TRUE,out.width="50%">>=
+## f(x)
+plot(fx, ylab = "Densidad")
+## F(x)
+acum <- function(x) {6*x^5 - 5*x^6}
+plot(acum,ylab = "F(x)")
+@
+9. \\
+<<>>=
+fit <- optimize(fx, c(0, 1), maximum=TRUE)
+print(fit$maximum)
+@
+10. \\
+<<>>=
+## Empleando TCL:
+mean_xbar <- 5/7
+sd_xbar <- sqrt((5/196)/25)
+pnorm(0.7,mean_xbar,sd_xbar,lower.tail = FALSE )
+@
 \end{document}
