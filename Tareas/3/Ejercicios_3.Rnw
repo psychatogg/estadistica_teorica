@@ -57,8 +57,7 @@ Resolución \\
 & \text{Dado que $n = 25$, aplicamos el teorema central del límite:} \\
 & E(X) = E(\bar X) = \frac{5}{7} \\
 \\
-& \text{No podemos determinar el valor de $Var(\bar X)$, ya que solo} \\
-& \text{contamos con una muestra.}
+& Var(X) = \frac {\sigma^{2}}{n} = \frac {\frac{5}{196}}{25} =  \frac{1}{980} \\
 \end{align*}
 5. \\
 \begin {align*}
