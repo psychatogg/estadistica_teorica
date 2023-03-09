@@ -33,4 +33,30 @@ Resolución \\
 \begin {align*}
 & h(x) = \frac{e^{-x}}{1+e^{-x}} \\
 \end {align*}
+1.4 \\
+\begin{align*}
+& P(x>2)=1-P(x \leqslant 2)= \\
+& 1-\left[-e^{-x}\right]_0^2=1-(-0,14+1)= \\
+& 0,14 \\
+\\
+& \text{Dado que tratamos con probabilidades acumuladas:} \\
+& P[(x>3) \cap (x>2)] = P(x>3) \\
+\\
+& P(x>3 \mid x>2) = \frac{P[(x>3) \cap (x>2)]}{P(x>2)} = \frac{0,05}{0,14} = 0,36 \\
+\end{align*}
+\\
+2.1 \\
+\begin {align*}
+& f(x) = 3 x^{2} \\
+& E(X) = \int_0^1 x3x^{2} = 3 \int_0^1 x^3 = \frac {3x^{4}}{4}]_0^1 = \frac {3}{4} \\
+\end {align*}
+2.2 \\
+\begin {align*}
+& E(X^{2}) = \int_0^1 x^{^2}3x^{2} = 3 \int_0^1 x^4 = \frac {3x^{5}}{5}]_0^1 = \frac {3}{5}\\
+& Var(X) = E(X^{2}) - \mu^{2} = \frac {3}{5} - (\frac {3}{4})^{2} = \frac{3}{80} \\
+\end{align*}
+2.3 \\
+\begin{align*}
+& F(x) = \int_0^x 3x^{2} = x^{3}]_0^x = x^3 \\
+\end{align*}
 \end{document}
