@@ -59,4 +59,32 @@ Resolución \\
 \begin{align*}
 & F(x) = \int_0^x 3u^{2} du = [u^{3}]_0^x = x^3 \\
 \end{align*}
+2.4 \\
+\begin{align*}
+& \text {Empleamos la inversa de F(x), dado que buscamos puntos que acumulen} \\
+& \text {el 25, el 50 y el 75 \% de las probabilidades:} \\
+\\
+& F^{-1}(p) = \sqrt[3]{p} \\
+& F^{-1}(0,25) =  0,63 \\
+& F^{-1}(0,5) =  0,79 \\
+& F^{-1}(0,75) =  0,91 \\
+\end {align*}
+2.5 \\
+\begin{align*}
+& F(0,8) = 0,8^{3} = 0,51 \\
+\end{align*}
+\\
+2.6 \\
+\begin{align*}
+& \text{Dado que $n = 25$, partiendo del teorema central del límite:} \\
+& \mu \approx E(X) \approx E(\bar X) \approx \frac {3}{4} \\
+& \sigma^{2} \approx Var(X) \approx \frac{3}{80} \\
+& Var(\bar X) = \frac {\sigma^{2}}{n} = \frac {\frac{3}{80}}{25} = \frac{3}{2000} \\
+& Desv(\bar X) = \sqrt{\frac{3}{2000}} = 0,04 \\
+\\
+& Z=\frac{\bar{X}-\mu}{Desv(\bar X)} = \frac {0,8-0,75} {0,04} = 1,25 \\
+\\
+& \text {Consultando en la tabla de la N(0,1):} \\
+& P(\bar X \leq 0,8) = P(Z \leq 1,25) = 0,89 \\
+\end{align*}
 \end{document}
