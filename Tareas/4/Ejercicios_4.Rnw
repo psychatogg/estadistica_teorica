@@ -48,11 +48,11 @@ Resolución \\
 2.1 \\
 \begin {align*}
 & f(x) = 3 x^{2} \\
-& E(X) = \int_0^1 x3x^{2} = 3 \int_0^1 x^3 = [\frac {3x^{4}}{4}]_0^1 = \frac {3}{4} \\
+& E(X) = \int_0^1 x3x^{2} dx = 3 \int_0^1 x^3 dx = [\frac {3x^{4}}{4}]_0^1 = \frac {3}{4} \\
 \end {align*}
 2.2 \\
 \begin {align*}
-& E(X^{2}) = \int_0^1 x^{^2}3x^{2} = 3 \int_0^1 x^4 = [\frac {3x^{5}}{5}]_0^1 = \frac {3}{5}\\
+& E(X^{2}) = \int_0^1 x^{^2}3x^{2} dx = 3 \int_0^1 x^4 dx = [\frac {3x^{5}}{5}]_0^1 = \frac {3}{5}\\
 & Var(X) = E(X^{2}) - \mu^{2} = \frac {3}{5} - (\frac {3}{4})^{2} = \frac{3}{80} \\
 \end{align*}
 2.3 \\
