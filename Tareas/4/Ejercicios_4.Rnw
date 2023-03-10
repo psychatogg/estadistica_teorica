@@ -15,11 +15,11 @@ Resolución \\
 1.1 \\
 \begin {align*}
 & f(x) = e^{-x} \\
-& F(x)=\int_0^x e^{-x} d x= \\
+& F(x)=\int_0^x e^{-u} d u= \\
 \\
-& u=-x \quad d u=-d x ; d x=-d u \\
+& z=-u \quad d z=-d u ; d u=-d z \\
 \\
-& = \left.-\int_0^x e^u d u=-e^{-x}\right]_0^x=-e^{-x} \\
+& = - \int_0^x e^z d z=  \left [-e^{-u}\right]_0^x=-e^{-x} \\
 \end {align*}
 \\
 1.2 \\
@@ -48,15 +48,15 @@ Resolución \\
 2.1 \\
 \begin {align*}
 & f(x) = 3 x^{2} \\
-& E(X) = \int_0^1 x3x^{2} = 3 \int_0^1 x^3 = \frac {3x^{4}}{4}]_0^1 = \frac {3}{4} \\
+& E(X) = \int_0^1 x3x^{2} = 3 \int_0^1 x^3 = [\frac {3x^{4}}{4}]_0^1 = \frac {3}{4} \\
 \end {align*}
 2.2 \\
 \begin {align*}
-& E(X^{2}) = \int_0^1 x^{^2}3x^{2} = 3 \int_0^1 x^4 = \frac {3x^{5}}{5}]_0^1 = \frac {3}{5}\\
+& E(X^{2}) = \int_0^1 x^{^2}3x^{2} = 3 \int_0^1 x^4 = [\frac {3x^{5}}{5}]_0^1 = \frac {3}{5}\\
 & Var(X) = E(X^{2}) - \mu^{2} = \frac {3}{5} - (\frac {3}{4})^{2} = \frac{3}{80} \\
 \end{align*}
 2.3 \\
 \begin{align*}
-& F(x) = \int_0^x 3x^{2} = x^{3}]_0^x = x^3 \\
+& F(x) = \int_0^x 3u^{2} du = [u^{3}]_0^x = x^3 \\
 \end{align*}
 \end{document}
