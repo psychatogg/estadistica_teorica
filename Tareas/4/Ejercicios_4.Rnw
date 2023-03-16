@@ -19,7 +19,7 @@ Resolución \\
 \\
 & z=-u \quad d z=-d u ; d u=-d z \\
 \\
-& = - \int_0^x e^z d z=  \left [-e^{-u}\right]_0^x=-e^{-x} \\
+& = - \int_0^x e^z d z=  \left [-e^{-u}\right]_0^x= 1-e^{-x} \\
 \end {align*}
 \\
 1.2 \\
@@ -31,7 +31,7 @@ Resolución \\
 \\
 1.3 \\
 \begin {align*}
-& h(x) = \frac{e^{-x}}{1+e^{-x}} \\
+& h(x) = \frac{e^{-x}}{1-(1-e^{-x})} = 1 \\
 \end {align*}
 1.4 \\
 \begin{align*}
