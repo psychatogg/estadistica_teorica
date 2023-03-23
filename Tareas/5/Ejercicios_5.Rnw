@@ -1,0 +1,44 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\allowdisplaybreaks
+
+
+\begin{document}
+Resolución \\
+\\
+1. \\
+\begin{align*}
+& F(y)=\int_0^y(\theta+1) t^\theta d t= \\
+& (\theta+1) \int_0^y t^\theta d t= \\
+& (\theta+1)\left[\frac{t^{\theta+1}}{\theta+1}\right]_0^y= \\
+& (\theta+1) \frac{y^{\theta+1}}{\theta+1}= \\
+& y^{\theta+1} \\
+\end{align*}
+\\
+2.\\
+\begin{align*}
+& E(Y)=\int_0^1(\theta+1) y^{\theta+1} d y= \\
+& (\theta+1) \int_0^1 y^{\theta+1} d y = \\
+& (\theta+1)\left[\frac{y^{\theta+2}}{\theta+2}\right]_0^1= \\
+& (\theta+1) \cdot\left(\frac{1^{\theta+2}}{\theta+2}\right)= \\
+& \frac{\theta+1}{\theta+2} \\
+\end{align*}
+\\
+3. \\
+\begin{align*}
+& \text{Solo hay un parámetro, por lo que empleamos el primer momento} \\
+& \hat{\alpha_1} = \bar{Y} = \frac{0,9+ 0,8+ 0,7+ 0,6+ 0,5}{5} = 0,7 \\
+\\
+& \text{Partiendo de la igualdad del momento poblacional al muestral, despejamos el estimador:} \\
+& \frac{\hat{\theta}+1}{\hat{\theta}+2} = 0,7 \\
+& \hat{\theta}+1=0,7 \cdot \hat{\theta}+1,4 \\
+& 0,3 \cdot \hat{\theta}=0,4 \\
+& \hat{\theta}=1,33 \\
+\end{align*}
+\end{document}
