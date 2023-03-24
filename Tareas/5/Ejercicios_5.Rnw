@@ -45,4 +45,24 @@ Resolución \\
 & \hat{\theta} = \frac{2\cdot 0,7 -1}{1-0,7} = 1,33 \\
 \end{align*}
 4. \\
+\begin{align*}
+& \text{A partir de nuestra muestra obtenemos la función de verosimilitud} \\
+& l(\theta) = (\theta+1) 0,9^{\theta} \cdot (\theta+1) 0,8^{\theta} \cdot (\theta+1) 0,7^{\theta} \cdot (\theta+1) 0,6^{\theta} \cdot (\theta+1) 0,5^{\theta} = \\
+& (\theta+1)^{5} \cdot (0,9\cdot 0,8 \cdot 0,7\cdot 0,6\cdot 0,5)^{\theta} = \\
+& (\theta+1)^{5} \cdot (0,15)^{\theta} \\
+\\
+& \text{Aplicamos propiedades del logaritmo para facilitar los cálculos posteriores} \\
+& \ln l(\theta)=5 ln(\theta+1)+\theta \ln (0,15) \\
+\\
+& \text{Localizamos el máximo de dicha función (máxima verosimilitud)} \\
+& \frac{d}{d \theta} \ln l(\theta)=5 \cdot \frac{1}{\theta+1}-1,9 \\
+& \frac{5}{\theta+1}-1,9=0 \\
+& \frac{1}{\theta+1}=0,38 \\
+& \theta+1=2,63 \\
+& \theta=1,63 \\
+\\
+& \frac{d^2}{d \theta} \ln (\theta)=5 \cdot(-1) \cdot(\theta-1)^{-2}= \\
+& \frac {-5}{(\theta-1)^2}; \quad \text{signo -} \\
+& \text{Encontramos un máximo en $\theta = 1,63$, por lo que $\hat{\theta} = 1,63$} \\
+\end{align*}
 \end{document}
