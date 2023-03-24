@@ -32,13 +32,17 @@ Resolución \\
 \\
 3. \\
 \begin{align*}
-& \text{Solo hay un parámetro, por lo que empleamos el primer momento} \\
-& \hat{\alpha_1} = \bar{Y} = \frac{0,9+ 0,8+ 0,7+ 0,6+ 0,5}{5} = 0,7 \\
+& \text{Igualamos el momento poblacional al muestral:} \\
+& \frac{\theta+1}{\theta+2} = \bar{Y} \\
+& \theta+1=\bar{Y}(\theta+2) \\
+& \theta+1=\bar{Y} \theta+2 \bar{Y} \\
+& \theta+1-\bar{Y} \theta=2 \bar{Y} \\
+& \theta-\bar{Y} \theta=2 \bar{Y}-1 \\
+& \theta=\frac{2 \bar{Y}-1}{1-\bar{Y}}
 \\
-& \text{Partiendo de la igualdad del momento poblacional al muestral, despejamos el estimador:} \\
-& \frac{\hat{\theta}+1}{\hat{\theta}+2} = 0,7 \\
-& \hat{\theta}+1=0,7 \cdot \hat{\theta}+1,4 \\
-& 0,3 \cdot \hat{\theta}=0,4 \\
-& \hat{\theta}=1,33 \\
+& \text{Dada la muestra y:} \\
+& \hat{\alpha_1} = \bar{Y} = \frac{0,9+ 0,8+ 0,7+ 0,6+ 0,5}{5} = 0,7 \\
+& \hat{\theta} = \frac{2\cdot 0,7 -1}{1-0,7} = 1,33 \\
 \end{align*}
+4. \\
 \end{document}
