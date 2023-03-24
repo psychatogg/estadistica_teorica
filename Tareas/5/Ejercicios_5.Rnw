@@ -47,22 +47,38 @@ Resolución \\
 4. \\
 \begin{align*}
 & \text{A partir de nuestra muestra obtenemos la función de verosimilitud} \\
-& l(\theta) = (\theta+1) 0,9^{\theta} \cdot (\theta+1) 0,8^{\theta} \cdot (\theta+1) 0,7^{\theta} \cdot (\theta+1) 0,6^{\theta} \cdot (\theta+1) 0,5^{\theta} = \\
+& L(\theta) = (\theta+1) 0,9^{\theta} \cdot (\theta+1) 0,8^{\theta} \cdot (\theta+1) 0,7^{\theta} \cdot (\theta+1) 0,6^{\theta} \cdot (\theta+1) 0,5^{\theta} = \\
 & (\theta+1)^{5} \cdot (0,9\cdot 0,8 \cdot 0,7\cdot 0,6\cdot 0,5)^{\theta} = \\
 & (\theta+1)^{5} \cdot (0,15)^{\theta} \\
 \\
-& \text{Aplicamos propiedades del logaritmo para facilitar los cálculos posteriores} \\
-& \ln l(\theta)=5 ln(\theta+1)+\theta \ln (0,15) \\
+& \text{Empleo la función de log-verosimilitud:} \\
+& l(\theta)=5 ln(\theta+1)+\theta \ln (0,15) \\
 \\
 & \text{Localizamos el máximo de dicha función (máxima verosimilitud)} \\
-& \frac{d}{d \theta} \ln l(\theta)=5 \cdot \frac{1}{\theta+1}-1,9 \\
+& l^{\prime}(\theta)=5 \cdot \frac{1}{\theta+1}-1,9 \\
 & \frac{5}{\theta+1}-1,9=0 \\
 & \frac{1}{\theta+1}=0,38 \\
 & \theta+1=2,63 \\
 & \theta=1,63 \\
 \\
-& \frac{d^2}{d \theta} \ln (\theta)=5 \cdot(-1) \cdot(\theta-1)^{-2}= \\
+& l^{\prime \prime} (\theta)=5 \cdot(-1) \cdot(\theta-1)^{-2}= \\
 & \frac {-5}{(\theta-1)^2}; \quad \text{signo -} \\
 & \text{Encontramos un máximo en $\theta = 1,63$, por lo que $\hat{\theta} = 1,63$} \\
 \end{align*}
+5. \\
+<<fig=TRUE, out.width="50%">>=
+theta <- seq(0,10,by=0.001)
+l <- function(theta) ((theta+1)^5)*(0.15)^theta
+plot(main="",theta,l(theta),xlim=c(0,10),xlab = "theta", ylab ="verosimilitud", type="l")
+@
+<<fig=TRUE, out.width="50%">>=
+log_l <- function(theta) 5*log(theta+1)+theta*log(0.15)
+plot(main="",theta,log_l(theta),xlim=c(0,10),xlab = "theta", ylab ="log-verosimilitud", type="l")
+@
+
+6. \\
+<<>>=
+lMax <- optimize(log_l, c(0, 10), maximum=TRUE)
+print(lMax, digits=3)
+@
 \end{document}
