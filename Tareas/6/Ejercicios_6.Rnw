@@ -22,8 +22,8 @@ Resolución \\
 \end{align*}
 \\
 2.\\
-La mediana será el punto que acumule el 50\% de probabilidad. Por lo tanto: \\
 \begin{align*}
+& \text{La mediana será el punto que acumule el 50\% de probabilidad. Por lo tanto:} \\
 & x^\lambda = 0,5 \\
 & x = \sqrt[\lambda] {0,5} \\
 \end{align*}
@@ -36,8 +36,8 @@ La mediana será el punto que acumule el 50\% de probabilidad. Por lo tanto: \\
 & \frac{\lambda}{\lambda+1} \\
 \end{align*}
 4. \\
-Igualamos el momento poblacional al muestral: \\
 \begin{align*}
+& \text{Igualamos el momento poblacional al muestral:} \\
 & \frac{\lambda}{\lambda+1} = \bar{X} \\
 & \lambda=\bar{X}(\lambda+1) \\
 & \lambda=\bar{X} \lambda+\bar{X} \\
@@ -46,5 +46,24 @@ Igualamos el momento poblacional al muestral: \\
 & \lambda=\frac{\bar{X}}{1-\bar{X}} \\
 & \text{Por lo tanto:} \\
 & \hat{\lambda}=\frac{\bar{X}}{1-\bar{X}} \\
+\end{align*}
+5. \\
+\begin{align*}
+&\text{A partir de nuestra muestra obtenemos la función de verosimilitud:} \\
+& L(\lambda) = \lambda^{n} \cdot (\prod_1^n x_i)^{\lambda-1} \\
+\\
+& \text{Empleo la función de log-verosimilitud:} \\
+& l(\lambda) = \ln [\lambda^{n} \cdot (\prod_1^n x_i)^{\lambda-1}] = \\
+& n \ln (\lambda) + (\lambda-1) \sum_1^n \ln (x_i) \\
+\\
+& \text{Localizamos el máximo de dicha función (máxima verosimilitud)} \\
+& l^{\prime}(\lambda) = \frac{n}{\lambda} + \sum_1^n \ln{x_i} \\
+\\
+& \frac{n}{\lambda} + \sum_1^n \ln{x_i} = 0 \\
+& \frac{n}{\lambda}=-\sum_1^n \ln \left(x_i\right) \\
+& \lambda=-\frac{n}{\sum_1^n \ln \left(x_i\right)} \\
+\\
+& l^{\prime \prime} (\lambda) = - \frac{n}{\lambda^{2}}; \quad \text{signo -} \\
+& \text{Encontramos un máximo en $\lambda = -\frac{n}{\sum_1^n \ln \left(x_i\right)} $, por lo que $\hat{\lambda} = -\frac{n}{\sum_1^n \ln \left(x_i\right)}$ } \\
 \end{align*}
 \end{document}
