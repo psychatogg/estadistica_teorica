@@ -1,0 +1,30 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\allowdisplaybreaks
+
+
+\begin{document}
+Resolución \\
+\\
+1. \\
+\begin{align*}
+& F(x)=\int_0^x \lambda t^{\lambda-1} d t= \\
+& \lambda \int_0^x t^{\lambda-1} dt =\\
+& \lambda [\frac{t^\lambda}{\lambda}]_0^x = \\
+& \lambda \frac{x^\lambda}{\lambda} =  \\
+& x^\lambda \\
+\end{align*}
+\\
+2.\\
+La mediana será el punto que acumule el 50\% de probabilidad. Por lo tanto: \\
+\begin{align*}
+& x^\lambda = 0,5 \\
+& x = \sqrt[\lambda] {0,5} \\
+\end{align*}
+\end{document}
