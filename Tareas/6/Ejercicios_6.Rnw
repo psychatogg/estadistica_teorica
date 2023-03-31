@@ -27,4 +27,24 @@ La mediana será el punto que acumule el 50\% de probabilidad. Por lo tanto: \\
 & x^\lambda = 0,5 \\
 & x = \sqrt[\lambda] {0,5} \\
 \end{align*}
+3. \\
+\begin{align*}
+& E(X)=\int_0^1 x \lambda x^{\lambda-1} dx = \\
+& \lambda \int_0^1 x^{\lambda} dx = \\
+& \lambda [\frac{x^{\lambda+1}}{\lambda+1}]_0^1 = \\
+& \lambda \frac{1^{\lambda+1}}{\lambda+1} \\
+& \frac{\lambda}{\lambda+1} \\
+\end{align*}
+4. \\
+Igualamos el momento poblacional al muestral: \\
+\begin{align*}
+& \frac{\lambda}{\lambda+1} = \bar{X} \\
+& \lambda=\bar{X}(\lambda+1) \\
+& \lambda=\bar{X} \lambda+\bar{X} \\
+& \lambda-\bar{X} \lambda=\bar{X} \\
+& \lambda(1-\bar{X})=\bar{X} \\
+& \lambda=\frac{\bar{X}}{1-\bar{X}} \\
+& \text{Por lo tanto:} \\
+& \hat{\lambda}=\frac{\bar{X}}{1-\bar{X}} \\
+\end{align*}
 \end{document}
