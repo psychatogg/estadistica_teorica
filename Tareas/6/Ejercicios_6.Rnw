@@ -66,4 +66,15 @@ Resolución \\
 & l^{\prime \prime} (\lambda) = - \frac{n}{\lambda^{2}}; \quad \text{signo -} \\
 & \text{Encontramos un máximo en $\lambda = -\frac{n}{\sum_1^n \ln \left(x_i\right)} $, por lo que $\hat{\lambda} = -\frac{n}{\sum_1^n \ln \left(x_i\right)}$ } \\
 \end{align*}
+\\
+6. \\
+\begin{align*}
+& \text{Extraemos la cantidad de información que proporciona la muestra:} \\
+& I(\lambda) = - (l^{\prime \prime}(\lambda)) = \frac{n}{\lambda^{2}} \\
+\\
+& \text{Calculamos la Varianza:} \\
+& Var(\lambda) = \frac{1}{I(\lambda)} =  \frac{\lambda^{2}}{n}\\
+\end{align*}
+\\
+7. \\
 \end{document}
