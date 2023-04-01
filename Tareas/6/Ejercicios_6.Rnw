@@ -10,9 +10,12 @@
 
 
 \begin{document}
+<<include=FALSE>>=
+options(width=60)
+@
 Resolución \\
 \\
-1. \\
+1.1. \\
 \begin{align*}
 & F(x)=\int_0^x \lambda t^{\lambda-1} d t= \\
 & \lambda \int_0^x t^{\lambda-1} dt =\\
@@ -21,13 +24,13 @@ Resolución \\
 & x^\lambda \\
 \end{align*}
 \\
-2.\\
+1.2.\\
 \begin{align*}
 & \text{La mediana será el punto que acumule el 50\% de probabilidad. Por lo tanto:} \\
 & x^\lambda = 0,5 \\
 & x = \sqrt[\lambda] {0,5} \\
 \end{align*}
-3. \\
+1.3. \\
 \begin{align*}
 & E(X)=\int_0^1 x \lambda x^{\lambda-1} dx = \\
 & \lambda \int_0^1 x^{\lambda} dx = \\
@@ -35,7 +38,7 @@ Resolución \\
 & \lambda \frac{1^{\lambda+1}}{\lambda+1} \\
 & \frac{\lambda}{\lambda+1} \\
 \end{align*}
-4. \\
+1.4. \\
 \begin{align*}
 & \text{Igualamos el momento poblacional al muestral:} \\
 & \frac{\lambda}{\lambda+1} = \bar{X} \\
@@ -47,9 +50,9 @@ Resolución \\
 & \text{Por lo tanto:} \\
 & \hat{\lambda}=\frac{\bar{X}}{1-\bar{X}} \\
 \end{align*}
-5. \\
+1.5. \\
 \begin{align*}
-&\text{A partir de nuestra muestra obtenemos la función de verosimilitud:} \\
+& \text{A partir de nuestra muestra obtenemos la función de verosimilitud:} \\
 & L(\lambda) = \lambda^{n} \cdot (\prod_1^n x_i)^{\lambda-1} \\
 \\
 & \text{Empleo la función de log-verosimilitud:} \\
@@ -67,7 +70,7 @@ Resolución \\
 & \text{Encontramos un máximo en $\lambda = -\frac{n}{\sum_1^n \ln \left(x_i\right)} $, por lo que $\hat{\lambda} = -\frac{n}{\sum_1^n \ln \left(x_i\right)}$ } \\
 \end{align*}
 \\
-6. \\
+1.6. \\
 \begin{align*}
 & \text{Extraemos la cantidad de información que proporciona la muestra:} \\
 & I(\lambda) = - (l^{\prime \prime}(\lambda)) = \frac{n}{\lambda^{2}} \\
@@ -76,5 +79,35 @@ Resolución \\
 & Var(\lambda) = \frac{1}{I(\lambda)} =  \frac{\lambda^{2}}{n}\\
 \end{align*}
 \\
-7. \\
+2.1. \\
+<<>>=
+x <- c(0.5,  0.2,  0.4,  0.6,  0.8)
+n<- length(x)
+lambda_hat <- -n/sum(log(x))
+print(lambda_hat)
+@
+
+2.2. \\
+<<>>=
+I <- n/(lambda_hat^2)
+err_tip <- 1/(sqrt(I))
+print(err_tip)
+@
+
+2.3. \\
+<<fig=TRUE, out.width="50%",tidy=TRUE>>=
+lambda <- seq(0,10,by=0.001)
+l <- function(lambda,x) (lambda^n * (prod(x))^(lambda-1))
+plot(main="",lambda,l(lambda,x),xlim=c(0,10),xlab = "lambda", ylab ="verosimilitud", type="l")
+@
+<<fig=TRUE, out.width="50%",tidy=TRUE>>=
+log_l <- function(lambda,x) (n * log(lambda) + (lambda-1) * sum(log(x)))
+plot(main="",lambda,log_l(lambda,x),xlim=c(0,10),xlab = "lambda", ylab ="log-verosimilitud", type="l")
+@
+
+2.4. \\
+<<>>=
+lMax <- optimize(log_l, c(0, 10),x=x, maximum=TRUE)
+print(lMax, digits=3)
+@
 \end{document}
