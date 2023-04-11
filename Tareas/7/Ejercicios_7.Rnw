@@ -35,4 +35,15 @@ Resolución \\
 & l^{\prime \prime}(\alpha) = -\frac{10}{\alpha^{2}}; \quad \text{signo - } \\
 & \text{Encontramos un máximo en $\alpha = 2,78$, por lo que $\hat{\alpha} = 2,78$ } \\
 \end{align*}
+\\
+2. \\
+\begin{align*}
+& \text{Extraemos la cantidad de información que proporciona la muestra:} \\
+& I(\alpha) = - (l^{\prime \prime}(\alpha)) = \frac{10}{\alpha^{2}} \\
+\\
+& \text{Calculamos la Varianza:} \\
+& Var(\alpha) = \frac{1}{I(\alpha)} = \frac{\alpha^{2}}{10} \\
+& \text{por lo tanto:} \\
+& \sigma_{\hat{\alpha}} = \sqrt{\frac{\alpha^{2}}{10}} = \frac{\alpha}{\sqrt{10}} \\
+\end{align*}
 \end{document}
