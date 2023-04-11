@@ -1,0 +1,38 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\allowdisplaybreaks
+
+
+\begin{document}
+<<include=FALSE>>=
+options(width=60)
+@
+Resolución \\
+\\
+1. \\
+\begin{align*}
+& \text{Obtenemos la función de verosimilitud:} \\
+& L(\alpha) = \alpha^{n} \cdot \prod_1^n (1+x_i)^{1-\alpha} \\
+\\
+& \text{Empleo la función de log-verosimilitud:} \\
+& l(\alpha) = ln[\alpha^{n} \cdot \prod_1^n (1+x_i)^{1-\alpha}] = \\
+& n \ln (\alpha) + (1-\alpha) \sum_1^n [ \ln (1+x_i)]\\
+\\
+& \text{Localizamos el máximo de dicha función (máxima verosimilitud)} \\
+& l^{\prime}(\alpha) = \frac {n}{\alpha} - 1 \cdot \sum_1^n [ \ln (1+x_i)] = \\
+& \text {sustituyendo por nuestra muestra:} \\
+& =  \frac {10}{\alpha} - 3,6 \\
+\\
+& \frac {10}{\alpha} - 3,6 = 0 \\
+& \alpha = 2,78 \\
+\\
+& l^{\prime \prime}(\alpha) = -\frac{10}{\alpha^{2}}; \quad \text{signo - } \\
+& \text{Encontramos un máximo en $\alpha = 2,78$, por lo que $\hat{\alpha} = 2,78$ } \\
+\end{align*}
+\end{document}
