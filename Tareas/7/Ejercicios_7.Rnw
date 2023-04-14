@@ -46,4 +46,42 @@ Resolución \\
 & \text{por lo tanto:} \\
 & \sigma_{\hat{\alpha}} = \sqrt{\frac{\alpha^{2}}{10}} = \frac{\alpha}{\sqrt{10}} \\
 \end{align*}
+\\
+3. \\
+<<fig=TRUE, out.width="50%",tidy=TRUE>>=
+x <- c(0.36, 0.11, 0.02, 0.05, 0.24, 0.32, 0.08, 2.72, 0.84, 0.88)
+n <- length(x)
+alpha <- seq(0,5,by=0.001)
+log_l <- function(alpha) (n * log(alpha) + (1-alpha) * sum(log(1+x)))
+plot(main="",alpha,log_l(alpha),xlim=c(0,5),xlab = "alpha", ylab ="log-verosimilitud", type="l")
+@
+
+4. \\
+<<>>=
+lMax <- optimize(log_l, c(0, 5), maximum=TRUE)
+print(lMax, digits=3)
+@
+
+5. \\
+<<>>=
+fit <- optim(1, f=log_l, method="Brent", lower=0, upper=10, control=list(fnscale=-1),
+						 hessian=TRUE) 
+var_alpha <- -1/fit$hessian
+print(var_alpha)
+@
+
+6.\\
+<<>>=
+alpha <- fit$par
+Se <- sqrt(var_alpha) 
+
+Z <- abs(qnorm(0.025)) 
+
+Ls <- alpha + Z*Se 
+Li <- alpha - Z*Se 
+cat(sprintf(
+"El estimador es alpha =%5.3f con Se =%5.3f\nIntervalo de confianza: (%5.3f,%5.3f)\n",
+alpha, Se, Li, Ls)) 
+@
+
 \end{document}
