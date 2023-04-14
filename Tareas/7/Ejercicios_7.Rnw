@@ -42,9 +42,11 @@ Resolución \\
 & I(\alpha) = - (l^{\prime \prime}(\alpha)) = \frac{10}{\alpha^{2}} \\
 \\
 & \text{Calculamos la Varianza:} \\
-& Var(\alpha) = \frac{1}{I(\alpha)} = \frac{\alpha^{2}}{10} \\
+& Var(\alpha) = \frac{1}{I(\alpha)} = \frac{\alpha^{2}}{10} =  \frac{2,78^{2}}{10} = 0,77\\
+\\
 & \text{por lo tanto:} \\
-& \sigma_{\hat{\alpha}} = \sqrt{\frac{\alpha^{2}}{10}} = \frac{\alpha}{\sqrt{10}} \\
+& \sigma_{\hat{\alpha}} = \sqrt{\frac{\alpha^{2}}{10}} = \frac{\alpha}{\sqrt{10}} = \\
+& \frac{2,78}{\sqrt{10}} = 0,88 \\
 \end{align*}
 \\
 3. \\
@@ -84,4 +86,6 @@ cat(sprintf(
 alpha, Se, Li, Ls)) 
 @
 
+7. \\
+Con un 95 \% de confianza, no tenemos suficiente evidencia estadística para rechazar la H0, dado que $\alpha =2$ se encuentra en el intervalo de confianza del parámetro.
 \end{document}
