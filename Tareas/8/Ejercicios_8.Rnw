@@ -1,0 +1,66 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\allowdisplaybreaks
+
+
+\begin{document}
+<<include=FALSE>>=
+options(width=60)
+@
+Resolución \\
+\\
+1. \\
+<<>>=
+S <- matrix(c( 
+  2.45, 0.57, 2.46, -0.21,  0.76, 1.32, 1.18,  0.62, 
+  0.57, 6.19, 2.45,  2.95,  2.06, 3.55, 3.29,  2.28, 
+  2.46, 2.45, 5.44,  0.65,  1.52, 3.38, 2.63,  2.10, 
+ -0.21, 2.95, 0.65,  2.93,  1.02, 1.61, 1.36,  1.11, 
+  0.76, 2.06, 1.52,  1.02,  3.17, 0.15, 2.78, -0.08, 
+  1.32, 3.55, 3.38,  1.61,  0.15, 5.48, 1.41,  3.12, 
+  1.18, 3.29, 2.63,  1.36,  2.78, 1.41, 4.35,  0.52, 
+  0.62, 2.28, 2.10,  1.11, -0.08, 3.12, 0.52,  3.21 
+), nrow=8) 
+n<- 100
+l <- function(x){
+lambda_1 <- x[1:8]
+lambda_2 <- x[5:8]
+lambda_3 <- x[9:12]
+
+lambda <- matrix(0, nrow = 8, ncol = 3)
+lambda[, 1] <- lambda_1
+lambda [1:4,2] <- lambda_2
+lambda[5:8,3] <- lambda_3
+
+
+
+
+
+psi <- diag(x[13:20])
+
+
+
+sigma <- lambda%*%t(lambda) + psi 
+invSigma <- solve(sigma)
+
+log_lk <- n*0.5*log(det(invSigma)) - n*0.5*sum(diag(S%*%invSigma))
+return(log_lk)
+
+}
+
+fit <- optim(par=c(rep(1,20)),
+             lower = c(rep(-8, 12), rep(0, 8)),
+             upper = c(rep(8, 12), rep(5, 8)),
+fn=l, method="L-BFGS-B", hessian=TRUE, control=list(fnscale=-1)) 
+
+print(fit$par) 
+
+@
+
+\end{document}
