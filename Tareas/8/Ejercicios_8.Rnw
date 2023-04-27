@@ -63,4 +63,29 @@ print(fit$par)
 
 @
 
+2. \\
+<<>>=
+H <- fit$hessian # segundas derivadas
+Informacion <- - H # información = - (segundas derivadas)
+VarCovar <- solve(Informacion) # varianza de los estimadores = 1/información
+print(sqrt(diag(VarCovar)), digits=2) # mostrar la varianza de los estimadores
+@
+
+3.\\
+<<>>=
+invS <- solve(S)
+p <- ncol(S)
+log_lk_saturado <- n*0.5*log(det(invS)) - n*0.5*p
+
+G2 <- -2*(fit$value - log_lk_saturado)
+par_saturado <- p*(p+1)/2
+par_factorial <- length(fit$par)
+gl <- par_saturado - par_factorial
+p_valor <- pchisq(G2, gl, lower.tail = F)
+
+
+cat(sprintf("G2 =%5.2f, gl =%1.0f, p =%3.2f\n", G2, gl, p_valor))
+@
+
+
 \end{document}
