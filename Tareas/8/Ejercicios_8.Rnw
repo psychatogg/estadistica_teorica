@@ -55,8 +55,8 @@ return(log_lk)
 }
 
 fit <- optim(par=c(rep(1,20)),
-             lower = c(rep(-8, 12), rep(0, 8)),
-             upper = c(rep(8, 12), rep(5, 8)),
+             lower = c(rep(-8, 10), rep(0, 10)),
+             upper = c(rep(8,10)),
 fn=l, method="L-BFGS-B", hessian=TRUE, control=list(fnscale=-1)) 
 
 print(fit$par) 
