@@ -87,5 +87,16 @@ p_valor <- pchisq(G2, gl, lower.tail = F)
 cat(sprintf("G2 =%5.2f, gl =%1.0f, p =%3.2f\n", G2, gl, p_valor))
 @
 
+4. \\
+<<>>=
+AIC_saturado <- -2*log_lk_saturado + 2*par_saturado
+AIC_factorial <- -2*fit$value + 2*par_factorial
+cat(sprintf(
+"AIC, saturado =%5.2f, bifactor =%5.2f",
+AIC_saturado, AIC_factorial))
+@
 
+5. \\
+El valor de AIC del modelo saturado es menor que el del modelo bifactor, por lo que obtenemos un primer indicador de que el modelo saturado tiene un mejor ajuste.\\
+Por otra parte, rechazamos la hipótesis de que el modelo bifactor reproduce la misma matriz Σ que el saturado, por lo que concluimos que nuestro modelo no ajusta a los datos, y que por lo tanto, no es apropiado.
 \end{document}
