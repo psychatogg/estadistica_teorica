@@ -30,8 +30,8 @@ S <- matrix(c(
 n<- 100
 l <- function(x){
 lambda_1 <- x[1:8]
-lambda_2 <- x[5:8]
-lambda_3 <- x[9:12]
+lambda_2 <- x[9:12]
+lambda_3 <- x[13:16]
 
 lambda <- matrix(0, nrow = 8, ncol = 3)
 lambda[, 1] <- lambda_1
@@ -42,7 +42,7 @@ lambda[5:8,3] <- lambda_3
 
 
 
-psi <- diag(x[13:20])
+psi <- diag(x[17:24])
 
 
 
@@ -54,9 +54,7 @@ return(log_lk)
 
 }
 
-fit <- optim(par=c(rep(1,20)),
-             lower = c(rep(-8, 10), rep(0, 10)),
-             upper = c(rep(8,20)),
+fit <- optim(par=c(rep(1,24)), ##  24 parámetros: 8+4+4 (+8 varianzas error)
 fn=l, method="L-BFGS-B", hessian=TRUE, control=list(fnscale=-1)) 
 
 print(fit$par) 
@@ -97,6 +95,6 @@ AIC_saturado, AIC_factorial))
 @
 
 5. \\
-El valor de AIC del modelo saturado es menor que el del modelo bifactor, por lo que obtenemos un primer indicador de que el modelo saturado tiene un mejor ajuste.\\
-Por otra parte, rechazamos la hipótesis de que el modelo bifactor reproduce la misma matriz Σ que el saturado, por lo que concluimos que nuestro modelo no ajusta a los datos, y que por lo tanto, no es apropiado.
+El valor de AIC del modelo bifactor es menor que el del modelo saturado, por lo que obtenemos un primer indicador de que nuestro modelo tiene un mejor ajuste.\\
+Por otra parte, no tenemos suficiente evidencia estadística para rechazar la hipótesis de que el modelo bifactor reproduce la misma matriz Σ que el saturado, por lo que concluimos que nuestro modelo ajusta a los datos, y que por lo tanto, es apropiado.
 \end{document}
